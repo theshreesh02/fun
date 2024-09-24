@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            height: 100px;
+            width: 100px;
+            text-align: center;
+            background-color: blue;
+        }
+        button{
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body id="body">
+    <div id="box">
+        <button onclick="update()">
+            Click me
+        </button>
+    </div>
+    <script>
+        function update(){
+            var r = Math.floor(Math.random()*250)
+            var g = Math.floor(Math.random()*250)
+            var b = Math.floor(Math.random()*250)
+            var color = 'rgb('+r+','+g+','+b+')'
+            console.log(color)
+            var color1 = 'rgb('+b+','+r+','+g+')'
+            document.getElementById('box').style.backgroundColor=color
+            document.getElementById('body').style.backgroundColor=color1
+
+        }
+    </script>
+</body>
+</html>
